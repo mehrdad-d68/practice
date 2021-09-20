@@ -1,0 +1,130 @@
+.container1{
+    display: grid;
+    grid-gap: 80px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 3fr;
+    max-height: 100px;
+}
+
+.head{
+    display: grid;
+    justify-items: end;
+    border-radius: 15px;
+    height: 80px;
+}
+
+.activity{
+    background-color: hsl(235, 46%, 20%);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr;
+    z-index: 2;
+    margin-top: -40px;
+    padding: 20px 10px 20px 10px;
+
+    border-radius: 15px;
+    .dot{
+        grid-area: 1/2/2/3;
+        justify-self: end;
+    }
+    .current{
+        grid-area: 2/1/3/2;
+        justify-self: start;
+    }
+    .pre{
+        grid-area: 2/2/3/3;
+        justify-self: end;
+    }
+    p{
+        margin: 5px 15px 0 15px;
+        color: white;
+    }
+    .act{
+        margin-top:15px;
+        font-size: 20px;
+    }
+}
+
+.Work{
+    background-color: hsl(15, 100%, 70%);
+}
+.Play{
+    background-color: hsl(195, 74%, 62%);
+}
+.Study{
+    background-color: hsl(348, 100%, 68%);
+}
+.Exercise{
+    background-color: hsl(145, 58%, 55%);
+}
+.Social{
+    background-color: hsl(264, 64%, 52%);
+}
+.Self-Care{
+    background-color: hsl(43, 84%, 65%);
+}
+@media (min-width:1000px){
+    .container1{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 250px 10px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 3fr;
+       // max-height: 100px;
+    }
+    
+    .head{
+        display: grid;
+        justify-items: end;
+        border-radius: 15px;
+        height: 90px;
+    }
+    
+    .activity{
+        background-color: hsl(235, 46%, 20%);
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        z-index: 2;
+        margin-top: -40px;
+        padding: 20px 10px 10px 10px;
+        overflow:visible;
+        border-radius: 15px;
+        .dot{
+            font-size: 30px;
+            grid-area: 1/2/2/3;
+            justify-self: end;
+        }
+        .current{
+            font-size: 40px;
+            grid-area: 2/1/3/2;
+            justify-self: start;
+        }
+        .pre{
+            font-size: 23px;
+            grid-area: 3/1/4/2;
+            justify-self: start;
+            font-weight:lighter;
+            opacity: 0.8;
+        }
+        p{
+           // margin: 1px;
+            margin: 5px 15px 25px 10px;
+            color: white;
+        }
+        .act{
+            grid-area: 1/1/2/2;
+            //margin-top:15px;
+            font-size: 25px;
+        }
+    }
+    
+    
+}

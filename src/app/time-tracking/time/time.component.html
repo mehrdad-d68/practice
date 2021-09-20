@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="name">
+        <div class="photo">
+            <div class="img">
+                <img src="../../../assets/time-tracking-dashboard-main/images/image-jeremy.png" alt="">
+            </div>
+            <div class="person">
+                <p>reported for</p>
+                <p>Jeremy Robson</p>
+            </div>
+        </div>
+        <div class="day">
+            <p [ngStyle]='{ "color":time==="day" ? "white": ""}' (click)='timeselected("day")' >Daily</p>
+            <p [ngStyle]='{ "color":time==="week" ? "white": ""}' (click)='timeselected("week")'>Weekly</p>
+            <p [ngStyle]='{ "color":time==="month" ? "white": ""}' (click)='timeselected("month")'>Monthly</p>
+        </div>
+    </div>
+    <div class="title">
+        <app-activities [time]='time'></app-activities>
+    </div>
+
+</div>

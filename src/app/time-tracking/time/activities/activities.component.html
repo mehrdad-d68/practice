@@ -1,0 +1,22 @@
+<div class="container1">
+    <div *ngFor='let data of datas ' class="container">
+        <div [ngClass]='data.title' class="head">
+            <img src='../../../../assets/time-tracking-dashboard-main/images/icon-{{data.title | lowercase}}.svg' alt="">
+        </div>
+        <div class="activity">
+                <p class="act">{{data.title}}</p>
+                <div class="current">
+                <p *ngIf='time==="day"' class="hrs"> {{data.timeframes.daily.current}} Hours </p>
+                <p *ngIf='time==="week"' class="hrs"> {{data.timeframes.weekly.current}} Hours </p>
+                <p *ngIf='time==="month"' class="hrs"> {{data.timeframes.monthly.current}} Hours </p>
+                </div>
+                <p class='dot'>...</p>
+               <div class="pre">
+                <p *ngIf='time==="day"' >Last {{time}}-{{data.timeframes.daily.previous}} hrs</p>
+                <p *ngIf='time==="week"' >Last {{time}}-{{data.timeframes.weekly.previous}} hrs</p>
+                <p *ngIf='time==="month"' >Last {{time}}-{{data.timeframes.monthly.previous}} hrs</p>
+               </div>
+            
+        </div>
+    </div>
+</div>
