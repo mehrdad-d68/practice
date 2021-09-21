@@ -13,6 +13,7 @@ interface list{
 export class ListsComponent implements OnInit {
   @Input() thingstodo:list[]=[]
   @Output() delete= new EventEmitter
+  @Input() toggle:boolean=false
  
   checked:boolean[]=[]
 

@@ -12,19 +12,29 @@
     //background-color: blue;
     grid-template-columns: auto auto auto;
     align-items: center;
-    transition: all 1s ease;
-    
+    transition: all 0.5s ease;
+    p{
+        transition: all 0.5s ease;
+    }
     img{
         justify-self: end;
         margin-right: 10px;
         opacity: 0;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
+    }
+    input[type='checkbox']{
+        margin-left: 10px;
+        transform: scale(1.5);
     }
    
 }
 .list:hover{
-    background-color: #fff;
+    background-color: rgb(27, 2, 2);
+    p{
+        color: white;
+    }
     img{
+        color: #fff;
         opacity: 1;
         cursor: pointer;
     }
@@ -35,4 +45,13 @@
 .ckecked{
     text-decoration: line-through;
     color: grey;
+}
+.dark{
+    input[type='checkbox']{
+        
+    }
+    background-color: black;
+    p{
+        color: grey;
+    }
 }

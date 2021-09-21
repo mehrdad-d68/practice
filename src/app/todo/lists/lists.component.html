@@ -1,4 +1,4 @@
-<div *ngIf='thingstodo' class="container">
+<div [ngClass]='{ "dark": toggle===false }' *ngIf='thingstodo' class="container">
     <div class="list" *ngFor='let list of thingstodo; let i=index'>
         <input type="checkbox" (change)='change(i)' >
         <p [ngClass]='{"ckecked": thingstodo[i].checked===true }'>{{list.todo}}</p>

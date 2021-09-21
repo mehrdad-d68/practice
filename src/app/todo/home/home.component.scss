@@ -1,8 +1,18 @@
+// body{
+//     background-color: black;
+//     position:relative;
+// }
+.body{
+    //background-color: pink;
+    height: 100%;
+}
 .container{
     display: grid;
     grid-template-columns: 1fr;
     //margin: 20px;
     justify-items: center;
+    //height: 100vh;
+    //background-color: black;
 }
 input:focus{
     outline: none;
@@ -63,4 +73,20 @@ input:focus{
     z-index: 1000;
     width: 100%;
     max-width: 400px;
+}
+.dark{
+    background-color: rgb(41, 32, 32);
+}
+.dark2{
+    input{
+        background-color: black;
+        color: white;
+    }
+    background-color: grey;
+    p{
+        color: red;
+    }
+    .TODO{
+        color: black;
+    }
 }
