@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="main">
+        <div class="img">
+            <img src="../../../assets/todo-app-main/images/bg-desktop-light.jpg" alt="brgbvdf">
+        </div>
+        <div class="input">
+            <p>TODO</p>
+            <div class="icon">
+                <img src="../../../assets/todo-app-main/images/icon-sun.svg" alt="">
+            </div>
+            <form class='multi'>
+                <input #newtodo type="text" class="add">
+                <button type="submit" (click)='onsubmit(newtodo.value)'>click</button>
+            </form>
+        </div>
+    </div>
+    <div class="lists">
+        <app-lists (delete) ='deletAtodo($event)' [thingstodo]='x'></app-lists>
+    </div>
+</div>
+

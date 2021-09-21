@@ -3,10 +3,11 @@
     box-sizing: border-box;
 }
 .container{
-    max-width: 1200px;
+    //max-width: 1200px;
     display: grid;
-    grid-template-columns:20px 20% 80%;
+    grid-template-columns:20px 15% 80%;
     // justify-self: end;
+    height: 100%;
     
 }
 ul{
@@ -20,6 +21,8 @@ ul{
     grid-template-columns: 1fr;
     grid-template-rows:50px 1fr;
     background-color: rgb(78, 179, 47);
+    height: 100vh;
+    //max-width: auto;
 }
 .main{
     grid-column: 3/4;

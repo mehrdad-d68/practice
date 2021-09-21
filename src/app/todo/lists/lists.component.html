@@ -1,0 +1,7 @@
+<div *ngIf='thingstodo' class="container">
+    <div class="list" *ngFor='let list of thingstodo; let i=index'>
+        <input type="checkbox" (change)='change(i)' >
+        <p [ngClass]='{"ckecked": thingstodo[i].checked===true }'>{{list.todo}}</p>
+        <img (click)='deletetodo(i)' src="../../../assets/todo-app-main/images/icon-cross.svg" alt="">
+    </div>
+</div>
